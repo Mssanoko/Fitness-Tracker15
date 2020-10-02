@@ -7,13 +7,13 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(logger("dev"));
-//mongodb+srv://Mssanoko-admin:<Anoko228>@cluster0.ncnsk.mongodb.net/<workout>?retryWrites=true&w=majority
-mongoose.connect(process.env.MONGODB_ATLAS_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
+
+mongoose.connect(process.env.MONGODB_ATLAS_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
 
 //Get the default connection
 var db = mongoose.connection;
