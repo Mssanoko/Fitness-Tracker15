@@ -26,10 +26,10 @@ client.connect(err => {
 mongoose.connect(process.env.MONGODB_ATLAS_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
 
 //Get the default connection
-var db = mongoose.connection;
+var dataBase = mongoose.connection;
 
 //Bind connection to error event (to get notification of connection errors)
-db.on("error", console.error.bind(console,"MongoDB connection error:"));
+dataBase.on("error", console.error.bind(console,"MongoDB connection error:"));
 
 // routes
 app.use(require("./routes/api-routes.js"));
