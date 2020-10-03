@@ -32,8 +32,8 @@ var db = mongoose.connection;
 db.on("error", console.error.bind(console,"MongoDB connection error:"));
 
 // routes
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/html-routes.js"));
 
 app.listen(PORT, () => {
     console.log(`App running on link http://localhost:3000`);
