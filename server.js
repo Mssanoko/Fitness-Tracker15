@@ -13,8 +13,16 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-// mongodb+srv://Mssanoko-admin:<Mssanoko>@cluster0.ncnsk.mongodb.net/<workouts>?retryWrites=true&w=majority
 
+//mongodb+srv://Mssanoko-admin:<Anoko228>@cluster0.ncnsk.mongodb.net/<workout>?retryWrites=true&w=majority
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://Mssanoko-admin:Mssanoko@cluster0.ncnsk.mongodb.net/<workout>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("workouts");
+  // perform actions on the collection object
+  client.close();
+});
 mongoose.connect(process.env.MONGODB_ATLAS_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
 
 //Get the default connection
