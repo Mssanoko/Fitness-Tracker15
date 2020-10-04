@@ -25,6 +25,10 @@
 <img width="990" alt="Screen Shot 2020-10-02 at 11 42 18 AM" src="https://user-images.githubusercontent.com/61078512/94942553-7809fc00-04a4-11eb-8ef1-692add0ce9ee.png">
 <img width="994" alt="Screen Shot 2020-10-02 at 11 44 09 AM" src="https://user-images.githubusercontent.com/61078512/94942720-abe52180-04a4-11eb-9b90-b3916c024989.png">
 
+### Demo 
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/61078512/95027660-4e99cd80-0668-11eb-8b90-5f380dd8375f.gif)
+
 ## Link
 
 https://cryptic-tundra-90014.herokuapp.com/
